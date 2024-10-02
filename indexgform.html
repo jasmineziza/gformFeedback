@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest Lecture Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eceebf;
+        }
+
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            background-color: rgb(185, 193, 50);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-group input[type="checkbox"] {
+            width: auto;
+        }
+
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Guest Lecture Feedback Form</h2>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+
+            <div class="form-group">
+                <label for="comfort">Comfort Level:</label>
+                <select id="comfort" name="comfort" required>
+                    <option value="">-- Select Comfort Level --</option>
+                    <option value="Very Comfortable">Very Comfortable</option>
+                    <option value="Comfortable">Comfortable</option>
+                    <option value="Neutral">Neutral</option>
+                    <option value="Uncomfortable">Uncomfortable</option>
+                    <option value="Very Uncomfortable">Very Uncomfortable</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Topics Covered (Select all that apply):</label>
+                <input type="checkbox" id="topic1" name="topics[]" value="Topic 1">
+                <label for="topic1">Topic 1</label><br>
+
+                <input type="checkbox" id="topic2" name="topics[]" value="Topic 2">
+                <label for="topic2">Topic 2</label><br>
+
+                <input type="checkbox" id="topic3" name="topics[]" value="Topic 3">
+                <label for="topic3">Topic 3</label>
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Additional Comments:</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="submit-btn">Submit Feedback</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
